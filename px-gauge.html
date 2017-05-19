@@ -375,7 +375,7 @@ Custom property | Description | Default
     },
 
     _computeActualBarWidth: function(barWidth, width) {
-      return parseInt(parseInt(this.barWidth || 0) || (50 * this.width / 300));
+      return parseFloat(parseFloat(this.barWidth || 0) || (50 * this.width / 300));
     },
 
     /**
@@ -540,7 +540,7 @@ Custom property | Description | Default
           for (var i = 0; i < ranges.length; i++) {
             var range = ranges[i];
             if (!isMatched) {
-              var value = parseInt(this.min + (this._currentPerc * (this.max - this.min)));
+              var value = parseFloat(this.min + (this._currentPerc * (this.max - this.min)));
               isMatched = (value > range[0] && value <= range[1]);
             }
           }
@@ -571,7 +571,7 @@ Custom property | Description | Default
           .tween('progress', (function() {
             return (function(percentOfPercent) {
               this._currentPerc = oldPerc + percentOfPercent * (targetPerc - oldPerc);
-              this.set('_valueOfProcess', (percentOfPercent == 1 ? this.value : parseInt(this.min + (this._currentPerc * (this.max - this.min)))) || 0);
+              this.set('_valueOfProcess', (percentOfPercent == 1 ? this.value : parseFloat(this.min + (this._currentPerc * (this.max - this.min)))) || 0);
               this._repaintGauge();
               return this._d3Select('.needle').attr('transform', "rotate(" + (this._minAngle + (scale(this._currentPerc) * this._range )) + ")");
             }).bind(this);
