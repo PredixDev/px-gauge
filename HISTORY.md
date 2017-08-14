@@ -1,3 +1,7 @@
+v2.0.2
+==================
+* change from number inputs to text inputs (IE)
+
 v2.0.1
 ==================
 * runtime theming for demo
