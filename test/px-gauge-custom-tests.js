@@ -10,10 +10,7 @@ function runCustomTests() {
             assert.equal(el.value, 0);
             assert.equal(el.min, 0);
             assert.equal(el.max, 100);
-            assert.equal(el.error.join(), [
-                [0, 12],
-                [79, 100]
-            ].join());
+            assert.equal(el.error.join(), [].join());
             done();
         });
 
@@ -45,7 +42,7 @@ function runCustomTests() {
             done();
         });
 
-        test('Check color of gauge bar by red color ranges', function(done) {
+        test('Check color of gauge bar is normal by default', function(done) {
             //wait for d3 render svg
             setTimeout(function() {
                 var el = Polymer.dom(document).querySelector('px-gauge');
@@ -56,11 +53,11 @@ function runCustomTests() {
                 setTimeout(function() {
                   var chart = el.querySelector('.chart-filled');
                   if(el.querySelector('.chart-filled').classList) {
-                    assert.equal(chart.classList.contains('error'), true);
+                    assert.equal(chart.classList.contains('normal'), true);
                     done();
                   } else {
                     var classes = chart.getAttribute('class').split(' ');
-                    assert.isAtLeast(classes.indexOf('error'), 0);
+                    assert.isAtLeast(classes.indexOf('normal'), 0);
                     done();
                   }
                 }, 1000)
@@ -74,6 +71,10 @@ function runCustomTests() {
                 el.min = 0;
                 el.max = 100;
                 el.value = 80;
+                el.error = [ [0, 12], [79, 100] ];
+                el.abnormal = [  [12, 32], [68, 79]  ];
+                el.anomaly = [ [32, 45],  [54, 68]  ];
+                el.normal = [ [45, 54] ];
                 var testCases = [
                     {
                         v: 80,

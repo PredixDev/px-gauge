@@ -1,3 +1,7 @@
+v2.1.2
+==================
+* fix unit tests
+
 v2.1.1
 ==================
 * small clarification in comments
