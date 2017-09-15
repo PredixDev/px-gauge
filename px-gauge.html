@@ -16,11 +16,12 @@
 
 Simple
 
-    <px-gauge-chart value="10"></px-gauge-chart>
+    <px-gauge value="10"></px-gauge>
 
 Advanced
 
-    <px-gauge-chart value="30"
+    <px-gauge value="30"
+        min="0"
         max="100"
         bar-width="0"
         unit="unit"
@@ -28,7 +29,7 @@ Advanced
         abnormal="[  [12, 32], [68, 79]  ]"
         anomaly="[ [32, 45],  [54, 68]  ]"
         normal="[ [45, 54] ]">
-    </px-gauge-chart>
+    </px-gauge>
 
 ### Styling
   The following custom properties are available for styling.
@@ -87,7 +88,7 @@ Custom property | Description
      */
     properties: {
       /**
-       * Current Value
+       * Current value of the gauge.
        * @property value
        * @type {Number}
        * @default `0`
@@ -98,88 +99,76 @@ Custom property | Description
       },
 
       /**
-       * List of error ranges.
-       * If current value belongs to an error range, state of filled gauge bar will be changed to error and color of error state will be applied to filled bar
+       * Array of error ranges, expressed as pairs of integers (not percentages).
+       * If current value belongs to an error range, state of filled gauge bar will be changed to error and color of error state will be applied to filled bar.
        * @property error
        * @type {Array}
-       * @default `[[0, 12], [79, 100]]`
+       * @default `[]`
        *
        */
       error: {
         type: Array,
         value: function() {
-          return [
-            [0, 12],
-            [79, 100]
-          ];
+          return [];
         },
         notify: true,
         observer: '_changeFilledGaugeBarState'
       },
 
       /**
-       * List of anomaly ranges.
+       * Array of anomaly ranges, expressed as pairs of integers (not percentages).
        * If current value belongs to an anomaly range, state of filled gauge bar will be changed to anomaly and color of anomaly state will be applied to filled bar
        * @type {Array}
-       * @default `[[32, 45], [54, 68]]`
+       * @default `[]`
        */
       anomaly: {
         type: Array,
         value: function() {
-          return [
-            [32, 45],
-            [54, 68]
-          ];
+          return [];
         },
         notify: true,
         observer: '_changeFilledGaugeBarState'
       },
 
       /**
-       * List of abnormal ranges.
+       * Array of abnormal ranges, expressed as pairs of integers (not percentages).
        * If current value belongs to an abnormal range, state of filled gauge bar will be changed to abnormal and color of abnormal state will be applied to filled bar
        * @property abnormal
        * @type {Array}
-       * @default `[[12, 32], [68, 79]]`
+       * @default `[]`
        */
       abnormal: {
         type: Array,
         value: function() {
-          return [
-            [12, 32],
-            [68, 79]
-          ];
+          return [];
         },
         notify: true,
         observer: '_changeFilledGaugeBarState'
       },
 
       /**
-       * List of normal ranges.
-       * If current value belongs to an normal range, state of filled gauge bar will be changed to normal and color of normal state will be applied to filled bar
+       * Array of normal ranges, expressed as pairs of integers (not percentages).
+       * If current value belongs to a normal range, state of filled gauge bar will be changed to normal and color of normal state will be applied to filled bar
        * @property normal
        * @type {Array}
-       * @default `[[45, 54]]`
+       * @default `[[0, 100]]`
        */
       normal: {
         type: Array,
         value: function() {
-          return [
-            [45, 54]
-          ];
+          return [[0, 100]];
         },
         notify: true,
         observer: '_changeFilledGaugeBarState'
       },
 
       /**
-       *
-       * List of state that can apply to filled gauge bar
-       * @property states
+       * List of states that can apply to filled gauge bar. Private, since the 4 corresponding properties are currently fixed.
+       * @property _states
        * @type {Array}
        * @default `['error', 'abnormal', 'anomaly', 'normal']`
        */
-      states: {
+      _states: {
         type: Array,
         value: function() {
           return ['error', 'abnormal', 'anomaly', 'normal'];
@@ -189,7 +178,7 @@ Custom property | Description
       },
 
       /**
-       * Minimum of input value
+       * Minimum value
        * @property min
        * @type {Number}
        * @default `0`
@@ -200,7 +189,7 @@ Custom property | Description
       },
 
       /**
-       * Maximum of input value
+       * Maximum value
        * @property max
        * @type {Number}
        * @default `100`
@@ -211,7 +200,7 @@ Custom property | Description
       },
 
       /**
-       * Unit of input value
+       * Unit label to display next to the gauge value.
        * @property unit
        * @type {String}
        * @default `unit`
@@ -234,8 +223,8 @@ Custom property | Description
       },
 
       /**
-       * Width of gauge bar, this property is also reflect to size of value number and unit label.
-       * If value of barWidth is 0, barWidth will be calculated base of width of _chart.
+       * Width of gauge bar. This property also impacts the size of the text labels.
+       * If value of barWidth is 0, barWidth will be calculated based off the width of the gauge.
        * @property barWidth
        * @type {Number}
        * @default `0`
@@ -282,24 +271,12 @@ Custom property | Description
           }
         }
       },
-
-      _minAngle: {
-        type: Number,
-        value: -180,
-        notify: true
-      },
-
-      _maxAngle: {
-        type: Number,
-        value: 0,
-        notify: true
-      },
-
-      _range: {
-        type: Number,
-        computed: '_computeRange(_minAngle, _maxAngle)'
-      },
-
+      /**
+      * Prevents the chart from automatically resizing to fit its container
+      * @property preventResize
+      * @type Boolean
+      * @default false
+      */
       preventResize: {
         type: Boolean,
         value: false
@@ -356,10 +333,6 @@ Custom property | Description
           this.set('height', this.width/2);
          }
       },100);
-    },
-
-    _computeRange: function(_minAngle, _maxAngle) {
-      return this._maxAngle - this._minAngle;
     },
 
     /**
@@ -530,7 +503,7 @@ Custom property | Description
      * @method _changeFilledGaugeBarColor
      */
     _changeFilledGaugeBarState: function() {
-      this._chart && this.states && this.states.forEach((function(state) {
+      this._chart && this._states && this._states.forEach((function(state) {
         var isMatched = false;
         var ranges = this[state];
 
@@ -538,8 +511,7 @@ Custom property | Description
           for (var i = 0; i < ranges.length; i++) {
             var range = ranges[i];
             if (!isMatched) {
-              var value = parseInt(this.min + (this._currentPerc * (this.max - this.min)));
-              isMatched = (value > range[0] && value <= range[1]);
+              isMatched = (this.value > range[0] && this.value <= range[1]);
             }
           }
           this._chart.select(".chart-filled").classed(state, isMatched);
@@ -571,7 +543,7 @@ Custom property | Description
               this._currentPerc = oldPerc + percentOfPercent * (targetPerc - oldPerc);
               this.set('_valueOfProcess', (percentOfPercent == 1 ? this.value : parseInt(this.min + (this._currentPerc * (this.max - this.min)))) || 0);
               this._repaintGauge();
-              return this._d3Select('.needle').attr('transform', "rotate(" + (this._minAngle + (scale(this._currentPerc) * this._range )) + ")");
+              return this._d3Select('.needle').attr('transform', "rotate(" + (-180 + (scale(this._currentPerc) * 180 )) + ")");
             }).bind(this);
           }).bind(this))
           .on("end", function() {

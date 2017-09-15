@@ -1,3 +1,9 @@
+v2.1.0
+==================
+* fix #5 so non-zero min is supported
+* also fixes #2
+* clean up documentation
+
 v2.0.2
 ==================
 * change from number inputs to text inputs (IE)
