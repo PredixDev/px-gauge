@@ -1,3 +1,7 @@
+v2.1.1
+==================
+* small clarification in comments
+
 v2.1.0
 ==================
 * fix #5 so non-zero min is supported
