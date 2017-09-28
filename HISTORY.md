@@ -1,3 +1,7 @@
+v2.1.3
+==================
+* update vis dependency
+
 v2.1.2
 ==================
 * fix unit tests
