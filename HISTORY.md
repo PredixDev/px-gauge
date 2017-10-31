@@ -1,3 +1,7 @@
+v2.1.4
+==================
+* add device flags, fix mobile demo
+
 v2.1.3
 ==================
 * update vis dependency
