@@ -1,5 +1,4 @@
 {
-  "verbose": true,
   "plugins": {
     "local": {
       "browsers": [
@@ -9,8 +8,7 @@
     },
     "sauce": {
       "disabled": true,
-      "browsers": [
-        {
+      "browsers": [{
           "browserName": "microsoftedge",
           "platform": "Windows 10",
           "version": ""
@@ -22,7 +20,7 @@
         },
         {
           "browserName": "safari",
-          "platform": "OS X 10.12",
+          "platform": "OS X 10.11a",
           "version": "10"
         },
         {
@@ -34,6 +32,6 @@
     }
   },
   "suites": [
-    "test/px-gauge-test-fixture.html"
+    "test/index.html"
   ]
 }
