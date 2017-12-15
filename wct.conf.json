@@ -20,7 +20,7 @@
         },
         {
           "browserName": "safari",
-          "platform": "OS X 10.11a",
+          "platform": "OS X 10.11",
           "version": "10"
         },
         {
