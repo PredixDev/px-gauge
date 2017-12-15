@@ -18,7 +18,7 @@
 <!-- Demo DOM module -->
 <dom-module id="px-gauge-demo">
   <template>
-    <style include="px-demo-styles" is="custom-style"></style>
+    <style include="px-demo-styles"></style>
 
     <!-- Header -->
     <px-demo-header
@@ -30,14 +30,14 @@
     <!-- Interactive -->
     <px-demo-interactive>
       <!-- Configs -->
-      <px-demo-configs configs="[[configs]]" props="{{props}}" chosen-config="{{chosenConfig}}"></px-demo-configs>
+      <px-demo-configs slot="px-demo-configs" configs="[[configs]]" props="{{props}}" chosen-config="{{chosenConfig}}"></px-demo-configs>
 
       <!-- Props -->
-      <px-demo-props props="{{props}}" config="[[chosenConfig]]"></px-demo-props>
-      <px-demo-code-editor props="{{props}}"></px-demo-code-editor>
+      <px-demo-props slot="px-demo-props" props="{{props}}" config="[[chosenConfig]]"></px-demo-props>
+      <px-demo-code-editor slot="px-demo-code-editor" props="{{props}}"></px-demo-code-editor>
 
       <!-- Component ---------------------------------------------------------->
-      <px-demo-component>
+      <px-demo-component slot="px-demo-component">
 
         <div style="width: 250px;">
           <px-gauge normal="{{props.normal.value}}"
@@ -57,9 +57,10 @@
       <!-- END Component ------------------------------------------------------>
 
       <px-demo-component-snippet
-          element-properties="{{props}}"
-          element-name="px-gauge"
-          links-includes="[[linksIncludes]]">
+        slot="px-demo-component-snippet"
+        element-properties="{{props}}"
+        element-name="px-gauge"
+        links-includes="[[linksIncludes]]">
       </px-demo-component-snippet>
     </px-demo-interactive>
 
