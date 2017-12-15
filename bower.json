@@ -1,6 +1,6 @@
 {
   "name": "px-gauge",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "main": [
     "px-gauge.html"
   ],
