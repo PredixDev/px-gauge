@@ -1,3 +1,7 @@
+v2.3.0
+==================
+* update vis version
+
 v2.2.1
 ==================
 * fixing demo pages for IE11

@@ -1,6 +1,6 @@
 {
   "name": "px-gauge",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "main": [
     "px-gauge.html"
   ],
@@ -21,8 +21,8 @@
   ],
   "dependencies": {
     "polymer": "#1.9 - 2",
-    "px-vis": "^4.0.0",
-    "px-d3-imports": "^2.0.0",
+    "px-vis": "^5.0.0",
+    "px-d3-imports": "^3.0.0",
     "iron-resizable-behavior": "^2.0.0"
   },
   "devDependencies": {
