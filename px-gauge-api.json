@@ -80,11 +80,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 262,
+              "line": 278,
               "column": 6
             },
             "end": {
-              "line": 272,
+              "line": 288,
               "column": 7
             }
           },
@@ -122,11 +122,11 @@
           "sourceRange": {
             "file": "bower_components/px-vis/px-vis-behavior-common.html",
             "start": {
-              "line": 1974,
+              "line": 1986,
               "column": 4
             },
             "end": {
-              "line": 1976,
+              "line": 1988,
               "column": 5
             }
           },
@@ -187,11 +187,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 111,
               "column": 6
             },
             "end": {
-              "line": 98,
+              "line": 114,
               "column": 7
             }
           },
@@ -207,11 +207,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 108,
+              "line": 124,
               "column": 6
             },
             "end": {
-              "line": 115,
+              "line": 131,
               "column": 7
             }
           },
@@ -227,29 +227,6 @@
           "name": "anomaly",
           "type": "Array",
           "description": "Array of anomaly ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an anomaly range, state of filled gauge bar will be changed to anomaly and color of anomaly state will be applied to filled bar",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 123,
-              "column": 6
-            },
-            "end": {
-              "line": 130,
-              "column": 7
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "notify": true,
-              "observer": "\"_changeFilledGaugeBarState\""
-            }
-          },
-          "defaultValue": "[]"
-        },
-        {
-          "name": "abnormal",
-          "type": "Array",
-          "description": "Array of abnormal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an abnormal range, state of filled gauge bar will be changed to abnormal and color of abnormal state will be applied to filled bar",
           "privacy": "public",
           "sourceRange": {
             "start": {
@@ -270,9 +247,9 @@
           "defaultValue": "[]"
         },
         {
-          "name": "normal",
+          "name": "abnormal",
           "type": "Array",
-          "description": "Array of normal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to a normal range, state of filled gauge bar will be changed to normal and color of normal state will be applied to filled bar",
+          "description": "Array of abnormal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an abnormal range, state of filled gauge bar will be changed to abnormal and color of abnormal state will be applied to filled bar",
           "privacy": "public",
           "sourceRange": {
             "start": {
@@ -281,6 +258,29 @@
             },
             "end": {
               "line": 162,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true,
+              "observer": "\"_changeFilledGaugeBarState\""
+            }
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "name": "normal",
+          "type": "Array",
+          "description": "Array of normal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to a normal range, state of filled gauge bar will be changed to normal and color of normal state will be applied to filled bar",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 171,
+              "column": 6
+            },
+            "end": {
+              "line": 178,
               "column": 7
             }
           },
@@ -299,11 +299,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 170,
+              "line": 186,
               "column": 6
             },
             "end": {
-              "line": 177,
+              "line": 193,
               "column": 7
             }
           },
@@ -322,11 +322,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 185,
+              "line": 201,
               "column": 6
             },
             "end": {
-              "line": 188,
+              "line": 204,
               "column": 7
             }
           },
@@ -342,11 +342,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 196,
+              "line": 212,
               "column": 6
             },
             "end": {
-              "line": 199,
+              "line": 215,
               "column": 7
             }
           },
@@ -362,11 +362,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 207,
+              "line": 223,
               "column": 6
             },
             "end": {
-              "line": 210,
+              "line": 226,
               "column": 7
             }
           },
@@ -382,11 +382,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 218,
+              "line": 234,
               "column": 6
             },
             "end": {
-              "line": 222,
+              "line": 238,
               "column": 7
             }
           },
@@ -404,11 +404,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 231,
+              "line": 247,
               "column": 6
             },
             "end": {
-              "line": 235,
+              "line": 251,
               "column": 7
             }
           },
@@ -426,11 +426,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 237,
+              "line": 253,
               "column": 6
             },
             "end": {
-              "line": 241,
+              "line": 257,
               "column": 7
             }
           },
@@ -448,11 +448,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 249,
+              "line": 265,
               "column": 6
             },
             "end": {
-              "line": 254,
+              "line": 270,
               "column": 7
             }
           },
@@ -471,11 +471,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 279,
+              "line": 295,
               "column": 6
             },
             "end": {
-              "line": 282,
+              "line": 298,
               "column": 7
             }
           },
@@ -491,11 +491,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 284,
+              "line": 300,
               "column": 6
             },
             "end": {
-              "line": 286,
+              "line": 302,
               "column": 7
             }
           },
@@ -510,11 +510,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 288,
+              "line": 304,
               "column": 6
             },
             "end": {
-              "line": 290,
+              "line": 306,
               "column": 7
             }
           },
@@ -529,11 +529,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 292,
+              "line": 308,
               "column": 6
             },
             "end": {
-              "line": 295,
+              "line": 311,
               "column": 7
             }
           },
@@ -569,11 +569,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 306,
+              "line": 322,
               "column": 4
             },
             "end": {
-              "line": 310,
+              "line": 326,
               "column": 5
             }
           },
@@ -829,11 +829,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 317,
+              "line": 333,
               "column": 4
             },
             "end": {
-              "line": 335,
+              "line": 351,
               "column": 5
             }
           },
@@ -846,11 +846,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 343,
+              "line": 359,
               "column": 4
             },
             "end": {
-              "line": 345,
+              "line": 361,
               "column": 5
             }
           },
@@ -867,11 +867,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 347,
+              "line": 363,
               "column": 4
             },
             "end": {
-              "line": 349,
+              "line": 365,
               "column": 5
             }
           },
@@ -891,11 +891,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 358,
+              "line": 374,
               "column": 4
             },
             "end": {
-              "line": 360,
+              "line": 376,
               "column": 5
             }
           },
@@ -918,11 +918,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 369,
+              "line": 385,
               "column": 4
             },
             "end": {
-              "line": 371,
+              "line": 387,
               "column": 5
             }
           },
@@ -945,11 +945,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 380,
+              "line": 396,
               "column": 4
             },
             "end": {
-              "line": 382,
+              "line": 398,
               "column": 5
             }
           },
@@ -972,11 +972,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 391,
+              "line": 407,
               "column": 4
             },
             "end": {
-              "line": 393,
+              "line": 409,
               "column": 5
             }
           },
@@ -999,11 +999,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 400,
+              "line": 416,
               "column": 4
             },
             "end": {
-              "line": 402,
+              "line": 418,
               "column": 5
             }
           },
@@ -1016,11 +1016,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 409,
+              "line": 425,
               "column": 4
             },
             "end": {
-              "line": 412,
+              "line": 428,
               "column": 5
             }
           },
@@ -1033,11 +1033,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 418,
+              "line": 434,
               "column": 4
             },
             "end": {
-              "line": 426,
+              "line": 442,
               "column": 5
             }
           },
@@ -1050,11 +1050,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 433,
+              "line": 449,
               "column": 4
             },
             "end": {
-              "line": 441,
+              "line": 457,
               "column": 5
             }
           },
@@ -1067,11 +1067,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 448,
+              "line": 464,
               "column": 4
             },
             "end": {
-              "line": 454,
+              "line": 470,
               "column": 5
             }
           },
@@ -1084,11 +1084,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 461,
+              "line": 477,
               "column": 4
             },
             "end": {
-              "line": 464,
+              "line": 480,
               "column": 5
             }
           },
@@ -1101,11 +1101,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 471,
+              "line": 487,
               "column": 4
             },
             "end": {
-              "line": 474,
+              "line": 490,
               "column": 5
             }
           },
@@ -1118,11 +1118,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 481,
+              "line": 497,
               "column": 4
             },
             "end": {
-              "line": 497,
+              "line": 513,
               "column": 5
             }
           },
@@ -1135,11 +1135,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 504,
+              "line": 520,
               "column": 4
             },
             "end": {
-              "line": 519,
+              "line": 535,
               "column": 5
             }
           },
@@ -1152,11 +1152,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 526,
+              "line": 542,
               "column": 4
             },
             "end": {
-              "line": 552,
+              "line": 568,
               "column": 5
             }
           },
@@ -1178,11 +1178,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 72,
+          "line": 88,
           "column": 10
         },
         "end": {
-          "line": 553,
+          "line": 569,
           "column": 3
         }
       },
@@ -1230,11 +1230,11 @@
           "description": "Margin between SVG and parent node",
           "sourceRange": {
             "start": {
-              "line": 262,
+              "line": 278,
               "column": 6
             },
             "end": {
-              "line": 272,
+              "line": 288,
               "column": 7
             }
           },
@@ -1265,11 +1265,11 @@
           "sourceRange": {
             "file": "bower_components/px-vis/px-vis-behavior-common.html",
             "start": {
-              "line": 1974,
+              "line": 1986,
               "column": 4
             },
             "end": {
-              "line": 1976,
+              "line": 1988,
               "column": 5
             }
           },
@@ -1282,11 +1282,11 @@
           "description": "Current value of the gauge.",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 111,
               "column": 6
             },
             "end": {
-              "line": 98,
+              "line": 114,
               "column": 7
             }
           },
@@ -1298,11 +1298,11 @@
           "description": "Array of error ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an error range, state of filled gauge bar will be changed to error and color of error state will be applied to filled bar.",
           "sourceRange": {
             "start": {
-              "line": 108,
+              "line": 124,
               "column": 6
             },
             "end": {
-              "line": 115,
+              "line": 131,
               "column": 7
             }
           },
@@ -1312,22 +1312,6 @@
         {
           "name": "anomaly",
           "description": "Array of anomaly ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an anomaly range, state of filled gauge bar will be changed to anomaly and color of anomaly state will be applied to filled bar",
-          "sourceRange": {
-            "start": {
-              "line": 123,
-              "column": 6
-            },
-            "end": {
-              "line": 130,
-              "column": 7
-            }
-          },
-          "metadata": {},
-          "type": "Array"
-        },
-        {
-          "name": "abnormal",
-          "description": "Array of abnormal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an abnormal range, state of filled gauge bar will be changed to abnormal and color of abnormal state will be applied to filled bar",
           "sourceRange": {
             "start": {
               "line": 139,
@@ -1342,8 +1326,8 @@
           "type": "Array"
         },
         {
-          "name": "normal",
-          "description": "Array of normal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to a normal range, state of filled gauge bar will be changed to normal and color of normal state will be applied to filled bar",
+          "name": "abnormal",
+          "description": "Array of abnormal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to an abnormal range, state of filled gauge bar will be changed to abnormal and color of abnormal state will be applied to filled bar",
           "sourceRange": {
             "start": {
               "line": 155,
@@ -1358,15 +1342,31 @@
           "type": "Array"
         },
         {
+          "name": "normal",
+          "description": "Array of normal ranges, expressed as pairs of numbers (not percentages).\nIf current value belongs to a normal range, state of filled gauge bar will be changed to normal and color of normal state will be applied to filled bar",
+          "sourceRange": {
+            "start": {
+              "line": 171,
+              "column": 6
+            },
+            "end": {
+              "line": 178,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "Array"
+        },
+        {
           "name": "min",
           "description": "Minimum value",
           "sourceRange": {
             "start": {
-              "line": 185,
+              "line": 201,
               "column": 6
             },
             "end": {
-              "line": 188,
+              "line": 204,
               "column": 7
             }
           },
@@ -1378,11 +1378,11 @@
           "description": "Maximum value",
           "sourceRange": {
             "start": {
-              "line": 196,
+              "line": 212,
               "column": 6
             },
             "end": {
-              "line": 199,
+              "line": 215,
               "column": 7
             }
           },
@@ -1394,11 +1394,11 @@
           "description": "Unit label to display next to the gauge value.",
           "sourceRange": {
             "start": {
-              "line": 207,
+              "line": 223,
               "column": 6
             },
             "end": {
-              "line": 210,
+              "line": 226,
               "column": 7
             }
           },
@@ -1410,11 +1410,11 @@
           "description": "Width of gauge bar. This property also impacts the size of the text labels.\nIf value of barWidth is 0, barWidth will be calculated based off the width of the gauge.",
           "sourceRange": {
             "start": {
-              "line": 231,
+              "line": 247,
               "column": 6
             },
             "end": {
-              "line": 235,
+              "line": 251,
               "column": 7
             }
           },
@@ -1426,11 +1426,11 @@
           "description": "Prevents the chart from automatically resizing to fit its container",
           "sourceRange": {
             "start": {
-              "line": 279,
+              "line": 295,
               "column": 6
             },
             "end": {
-              "line": 282,
+              "line": 298,
               "column": 7
             }
           },
